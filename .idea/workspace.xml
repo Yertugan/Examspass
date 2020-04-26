@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="792e86f1-e59a-4b5b-be16-c5a9931c4a44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,6 +166,7 @@
       <find>favorite</find>
       <find>country</find>
       <find>genre</find>
+      <find>cinema</find>
     </findStrings>
     <replaceStrings>
       <replace>course</replace>
@@ -179,6 +174,7 @@
       <replace>my</replace>
       <replace>organization</replace>
       <replace>exam</replace>
+      <replace>exams</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -340,17 +336,17 @@
       <workItem from="1577001036824" duration="19912000" />
       <workItem from="1587908149562" duration="6457000" />
       <workItem from="1587921352495" duration="224000" />
-      <workItem from="1587921631748" duration="1989000" />
+      <workItem from="1587921631748" duration="2375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37941000" />
+    <option name="totallyTimeSpent" value="38327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26778522" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26778522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -364,7 +360,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32152975" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32152975" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
