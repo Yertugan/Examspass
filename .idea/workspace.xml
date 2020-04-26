@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="792e86f1-e59a-4b5b-be16-c5a9931c4a44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.log" beforeDir="false" afterPath="$PROJECT_DIR$/api.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0002_movie_rating.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0002_movie_rating.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0003_auto_20191222_2039.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0003_auto_20191222_2039.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0004_movie_premiere.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0004_movie_premiere.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0005_auto_20191222_2112.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0005_auto_20191222_2112.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views/viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth1/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth1/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/movies/1/ph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/movies/2/ph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/movies/3/ph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/movies/4/ph.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/movies/6/ph.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-85">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -89,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/auth1/migrations/0001_initial.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -123,6 +111,15 @@
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -232,16 +229,6 @@
             <path>
               <item name="cinema" type="b2602c69:ProjectViewProjectNode" />
               <item name="cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="cinema" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cinema" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -321,7 +308,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37380000" />
+    <option name="totallyTimeSpent" value="37522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -358,7 +345,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myvenv/lib/python3.7/site-packages/rest_framework_jwt/__init__.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py" />
     <entry file="file://$PROJECT_DIR$/api/views/__init__.py">
@@ -580,7 +571,7 @@
     <entry file="file://$PROJECT_DIR$/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -590,7 +581,7 @@
     <entry file="file://$PROJECT_DIR$/auth1/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
