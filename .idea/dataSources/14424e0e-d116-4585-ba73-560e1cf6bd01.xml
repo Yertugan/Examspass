@@ -13,7 +13,7 @@
     <collation id="5" parent="1" name="RTRIM"/>
     <table id="6" parent="2" name="api_course"/>
     <table id="7" parent="2" name="api_courseimage"/>
-    <table id="8" parent="2" name="api_favoritecourse"/>
+    <table id="8" parent="2" name="api_mycourse"/>
     <table id="9" parent="2" name="auth1_mainuser"/>
     <table id="10" parent="2" name="auth1_mainuser_groups"/>
     <table id="11" parent="2" name="auth1_mainuser_user_permissions"/>

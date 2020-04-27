@@ -38,11 +38,11 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='FavoriteCourse',
+            name='MyCourse',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('course', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.Course')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='favorite_courses', to=settings.AUTH_USER_MODEL)),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='my_courses', to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
