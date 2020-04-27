@@ -5,4 +5,4 @@ admin.site.register(Course)
 
 admin.site.register(CourseImage)
 
-admin.site.register(FavoriteCourse)
+admin.site.register(MyCourse)

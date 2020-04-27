@@ -32,7 +32,7 @@ class CourseImage(models.Model):
                               null=True)
 
 
-class FavoriteCourse(models.Model):
+class MyCourse(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    user = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='favorite_courses')
+    user = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='my_courses')
 

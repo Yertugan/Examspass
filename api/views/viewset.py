@@ -46,10 +46,10 @@ class CourseViewSet(viewsets.ModelViewSet):
         return [IsAdminUser()]
 
     @action(methods=['GET', 'POST'], detail=False)
-    def favorite(self, request):
+    def my(self, request):
         logger.info('received my request')
         if request.method == 'GET':
-            fav_courses = request.user.favorite_courses.all()
+            fav_courses = request.user.my_courses.all()
             courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
             serializer = CourseSerializer(courses, many=True)
             return Response(serializer.data)
@@ -60,10 +60,10 @@ class CourseViewSet(viewsets.ModelViewSet):
                 logging.info("course id %s", i)
                 try:
                     course = Course.objects.get(id=i)
-                    FavoriteCourse.objects.create(course=course, user=request.user)
+                    MyCourse.objects.create(course=course, user=request.user)
                 except:
                     raise Exception('not such course')
-            fav_courses = request.user.favorite_courses.all()
+            fav_courses = request.user.my_courses.all()
             courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
             serializer = CourseSerializer(courses, many=True)
             return Response(serializer.data)

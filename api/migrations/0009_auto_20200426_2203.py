@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='api.Course'),
         ),
         migrations.AlterField(
-            model_name='favoritecourse',
+            model_name='mycourse',
             name='course',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.Course'),
         ),
