@@ -47,7 +47,7 @@ class CourseViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET', 'POST'], detail=False)
     def favorite(self, request):
-        logger.info('received fovorite request')
+        logger.info('received my request')
         if request.method == 'GET':
             fav_courses = request.user.favorite_courses.all()
             courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
@@ -99,30 +99,14 @@ class CourseViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     @action(methods=['GET'], detail=False)
-    def premieres_of_the_week(self, request):
-        logger.info('received request: premieres of the week')
-
-        def this_week(premiere):
-            premiere_time = premiere.replace(tzinfo=None)
-            now_time = datetime.now().replace(tzinfo=None)
-            difference = premiere_time - now_time
-            logger.info('number of days to wait to %s is : %s', premiere, difference.days)
-            return 0 <= difference.days < 7 and premiere_time.weekday() >= now_time.weekday()
-
-        courses = Course.objects.all()
-        courses = [course for course in courses if this_week(course.premiere)]
-        serializer = CourseSerializer(courses, many=True)
-        return Response(serializer.data)
-
-    @action(methods=['GET'], detail=False)
     def refresh(self, request):
         logger.info('received request: refresh list of courses')
         courses = Course.objects.all()
 
         def obsolete_course(course):
-            premiere_time = course.premiere.replace(tzinfo=None)
+            time_created_time = course.time_created.replace(tzinfo=None)
             now_time = datetime.now().replace(tzinfo=None)
-            difference = now_time - premiere_time
+            difference = now_time - time_created_time
             return difference.days >= 60
 
         [course.delete() for course in courses if obsolete_course(course)]

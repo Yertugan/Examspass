@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='course',
-            name='premiere',
+            name='time_created',
             field=models.DateTimeField(blank=True, default=datetime.datetime(2020, 4, 26, 18, 1, 46, 216420, tzinfo=utc)),
         ),
         migrations.AlterField(

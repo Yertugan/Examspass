@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='course',
-            name='premiere',
+            name='time_created',
             field=models.DateTimeField(blank=True, default=datetime.datetime(2019, 12, 22, 21, 11, 18, 374007)),
         ),
     ]
