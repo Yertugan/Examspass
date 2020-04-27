@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="792e86f1-e59a-4b5b-be16-c5a9931c4a44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/14424e0e-d116-4585-ba73-560e1cf6bd01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/14424e0e-d116-4585-ba73-560e1cf6bd01.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0006_auto_20200426_1948.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0006_auto_20200426_1948.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0007_auto_20200426_2134.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0007_auto_20200426_2134.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0008_auto_20200426_2139.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0008_auto_20200426_2139.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0009_auto_20200426_2203.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0009_auto_20200426_2203.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0010_auto_20200426_2250.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0010_auto_20200426_2250.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0011_auto_20200426_2326.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0011_auto_20200426_2326.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0012_auto_20200427_0001.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0012_auto_20200427_0001.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/0013_auto_20200427_0010.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/migrations/0013_auto_20200427_0010.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views/viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -330,7 +316,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41282000" />
+    <option name="totallyTimeSpent" value="42510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
