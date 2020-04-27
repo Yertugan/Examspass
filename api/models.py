@@ -15,7 +15,7 @@ class Course(models.Model):
     no_of_rates = models.IntegerField(default=0)
     rating = models.FloatField(default=0.0)
 
-    premiere = models.DateTimeField(default=timezone.now(), blank=True)
+    time_created = models.DateTimeField(default=timezone.now(), blank=True)
 
     organization = models.CharField(max_length=255)
     exam = models.CharField(max_length=255)
