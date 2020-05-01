@@ -1,0 +1,16 @@
+.footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  heigth: 30px;
+  border-top-color: #0FBCF9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.footer-col{
+  color: #0FBCF9;
+  height: 40px;
+  margin-top: 15px;
+}
