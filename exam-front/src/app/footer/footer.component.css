@@ -1,5 +1,4 @@
 .footer{
-  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -7,6 +6,7 @@
   border-top-color: #0FBCF9;
   border-style: solid;
   border-width: 1px;
+  background-color: white;
 }
 
 .footer-col{
