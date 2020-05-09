@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
-<<<<<<< HEAD
+
 import { CourseinfoComponent } from './courseinfo/courseinfo.component';
 import { ProfileComponent } from './profile/profile.component';
-=======
+
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
->>>>>>> 6c66397fa4a270149e831724b3ef0d7f37fe8a87
+
 
 @NgModule({
   declarations: [
@@ -20,13 +20,11 @@ import { RegistrationComponent } from './registration/registration.component';
     HeaderComponent,
     FooterComponent,
     LandingComponent,
-<<<<<<< HEAD
+
     CourseinfoComponent,
-    ProfileComponent
-=======
+    ProfileComponent,
     LoginComponent,
     RegistrationComponent
->>>>>>> 6c66397fa4a270149e831724b3ef0d7f37fe8a87
   ],
   imports: [
     BrowserModule,
