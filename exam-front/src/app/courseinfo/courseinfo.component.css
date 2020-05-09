@@ -1,0 +1,36 @@
+.banner{
+  background: url('/assets/img/bg-banner.jpg') no-repeat center top;
+  background-size: cover;
+  min-height: 580px;
+  position: relative;
+}
+.container {
+  position: relative;
+  text-align: center;
+  min-height: 580px;
+}
+
+.bg-color{
+  background-color: RGBA(12, 11, 11, 0.82);
+  min-height: 580px;
+}
+
+
+.intro-para{
+  font-size: 45px;
+  color: #fff;
+  margin-top:250px;
+}
+
+
+.big-text{
+  font-size: 35px;
+}
+.small-text{
+  font-size: 16px;
+}
+.mybtn{
+  background-color: #0FBCF9;
+  border-color: #0FBCF9;
+  color: white;
+}
