@@ -7,7 +7,8 @@ export interface Course {
   created_at?: string;
   lesson_number?: Lesson[];
   creator?: User;
-  coruse_rainig?: [];
   course_comments?: [];
+  rating_count?: number;
+  rating_sum?: number;
   picture?: string;
 }

@@ -5,4 +5,5 @@ export interface Lesson {
   lecture_text?: string;
   my_course?: Course;
   lecture_files?: [];
+  isDone?: number;
 }

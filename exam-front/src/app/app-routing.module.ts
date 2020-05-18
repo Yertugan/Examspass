@@ -11,14 +11,12 @@ import {CourseinfoComponent} from "./courseinfo/courseinfo.component";
 const routes: Routes = [
 
 
-  {path: '', component: LandingComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'login', component: LoginComponent},
-
-  {path: 'profile/:id',
-    component: ProfileComponent,
-    canActivate: [AuthGuard]
+  {path: '', component: LandingComponent,
   },
+
+  {path: 'login', component: LoginComponent},
 
   {path: 'course_info/:id', component: CourseinfoComponent},
 
@@ -28,6 +26,12 @@ const routes: Routes = [
 
   //{path: '', component: canActivate: [AuthGuard]},
 //{path: '', component:},
+  /*
+  {path: 'profile/:id',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
+*/
 
 ];
 

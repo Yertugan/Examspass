@@ -12,6 +12,13 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+}
+  /*
   @ViewChild('fileInput') fileInput: ElementRef;
 
   form: FormGroup;
@@ -111,3 +118,4 @@ export class RegistrationComponent implements OnInit {
   }
 
 }
+*/
