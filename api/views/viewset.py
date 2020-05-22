@@ -7,15 +7,26 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
 import logging
 from django.http import Http404
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
 from api.models import *
 from api.serializers import *
 from rest_framework.views import APIView
 from django.utils import timezone
+from django.shortcuts import render
 
 logger = logging.getLogger(__name__)
 
+def upload_file(request):
+    if request.method == 'POST':
+        lesson_file = Lesson(request.POST, request.FILES)
+        if lesson_file.is_valid():
+            lesson_file.save()
+            return HttpResponseRedirect('/success/url')
+    else:
+        lesson_file = Lesson()
+    return render(request, 'upload.html', {'lesson_file': lesson_file})
 
 class CourseImageViewSet(viewsets.ModelViewSet):
     queryset = CourseImage.objects.all()
@@ -62,7 +73,7 @@ class CourseViewSet(viewsets.ModelViewSet):
                     course = Course.objects.get(id=i)
                     MyCourse.objects.create(course=course, user=request.user)
                 except:
-                    raise Exception('not such course')
+                    raise Exception('no such course')
             fav_courses = request.user.my_courses.all()
             courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
             serializer = CourseSerializer(courses, many=True)

@@ -43,7 +43,7 @@
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="6" name="description">
+    <column id="25" parent="6" name="about">
       <Position>3</Position>
       <DataType>varchar(2550)|0s</DataType>
       <NotNull>1</NotNull>

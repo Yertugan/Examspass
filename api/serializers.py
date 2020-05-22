@@ -25,8 +25,8 @@ class CourseSerializer(serializers.ModelSerializer):
         return ''
 
     def validate_price(self, value):
-        if value < 0 or value > 15000:
-            raise serializers.ValidationError('price must be positive integer and at most 15000')
+        if value < 0:
+            raise serializers.ValidationError('price must be positive number')
         return value
 
     '''
@@ -59,4 +59,4 @@ class CourseFullSerializer(CourseSerializer):
     # )
 
     class Meta(CourseSerializer.Meta):
-        fields = CourseSerializer.Meta.fields + ('description', 'images')
+        fields = CourseSerializer.Meta.fields + ('about', 'images')

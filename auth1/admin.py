@@ -17,4 +17,4 @@ class MainUserAdmin(UserAdmin):
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'bio', 'address', 'user',)
+    list_display = ('id', 'bio', 'user',)

@@ -1,14 +1,14 @@
+.container{
+  margin-top: 150px;
+  margin-bottom: 230px;
+}
+
 .account-box
 {
-  border: 2px solid rgba(153, 153, 153, 0.75);
+  border: 1px solid #0FBCF9;
   border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  -o-border-radius: 2px;
   z-index: 3;
   font-size: 13px !important;
-  font-family: "Helvetica Neue" ,Helvetica,Arial,sans-serif;
   background-color: #ffffff;
   padding: 20px;
 }
@@ -23,47 +23,25 @@
   position: relative;
 }
 
+.sign-text{
+  font-size: 20px;
+  color: #525252;
+}
+
 .forgotLnk
 {
   margin-top: 10px;
   display: block;
 }
 
-.purple-bg
-{
-  background-color: #6E329D;
-  color: #fff;
-}
-.or-box
-{
-  position: relative;
-  border-top: 1px solid #dfdfdf;
-  padding-top: 20px;
-  margin-top:20px;
-}
-.or
-{
-  color: #666666;
-  background-color: #ffffff;
-  position: absolute;
-  text-align: center;
-  top: -8px;
-  width: 40px;
-  left: 90px;
-}
-.account-box .btn:hover
+
+.account-box
 {
   color: #fff;
 }
-.btn-facebook
-{
-  background-color: #3F639E;
-  color: #fff;
-  font-weight:bold;
-}
-.btn-google
-{
-  background-color: #454545;
-  color: #fff;
-  font-weight:bold;
+
+
+.sign-in{
+  background-color: #0FBCF9;
+  color: white;
 }

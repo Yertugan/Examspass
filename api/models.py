@@ -6,24 +6,27 @@ from utils.validators import *
 from django.utils import timezone
 
 
-class Course(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.CharField(max_length=2550)
-    price = models.IntegerField()
+class Lesson(models.Model):
+    lesson_text = models.CharField(max_length=1000)
+    file = models.FileField()
 
+
+class Course(models.Model):
+    course_id = models.IntegerField(default=0)
+    name = models.CharField(max_length=255)
+    about = models.CharField(max_length=1000)
+    price = models.IntegerField()
     sum_of_rates = models.IntegerField(default=0)
     no_of_rates = models.IntegerField(default=0)
     rating = models.FloatField(default=0.0)
-
     time_created = models.DateTimeField(default=timezone.now(), blank=True)
-
     organization = models.CharField(max_length=255)
     exam = models.CharField(max_length=255)
     teacher = models.CharField(max_length=255)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='courses')
 
     def __str__(self):
-        return f'{self.creator}: {self.id} {self.name}'
+        return f'{self.course_id}: {self.id} {self.name}'
 
 
 class CourseImage(models.Model):
