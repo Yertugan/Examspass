@@ -12,7 +12,7 @@ class Lesson(models.Model):
 
 
 class Course(models.Model):
-    course_id = models.IntegerField(default=0)
+    #course_id = models.IntegerField(default=0)
     name = models.CharField(max_length=255)
     about = models.CharField(max_length=1000)
     price = models.IntegerField()
@@ -26,7 +26,7 @@ class Course(models.Model):
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='courses')
 
     def __str__(self):
-        return f'{self.course_id}: {self.id} {self.name}'
+        return f'{self.creator}: {self.id} {self.name}'
 
 
 class CourseImage(models.Model):
