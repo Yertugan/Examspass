@@ -23,6 +23,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { PurchasePageComponent } from './purchase-page/purchase-page.component';
 import {register} from "ts-node";
 import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
+import { UserformComponent } from './userform/userform.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
     ProfileComponent,
     LoginComponent,
     RegistrationComponent,
-    PurchasePageComponent
+    PurchasePageComponent,
+    UserformComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,7 @@ class Course(models.Model):
     teacher = models.CharField(max_length=255)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='courses')
 
+
     def __str__(self):
         return f'{self.creator}: {self.id} {self.name}'
 
