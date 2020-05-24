@@ -1,0 +1,20 @@
+a.list-group-item {
+  height:auto;
+  min-height:220px;
+  padding-top: 20px;
+}
+a.list-group-item.active small {
+  color:#0FBCF9;
+}
+a:hover{
+  background-color: #0FBCF9;
+  color: white;
+}
+.stars {
+  margin:20px auto 1px;
+}
+
+.container{
+  margin-top: 80px;
+}
+
