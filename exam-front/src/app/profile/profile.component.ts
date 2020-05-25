@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {UserService} from "../shared/services/user-services/user.service";
+import {AuthenticationService} from "../shared/services/auth-services/authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  me: any;
 
-  ngOnInit(): void {
+  @Input('active') active: string;
+
+  constructor(private authenticationService: AuthenticationService,
+              private userService: UserService,
+              private router: Router) {
   }
 
+  ngOnInit(): void {
+    if (!this.authenticationService.isAuthenticated()) {
+      this.router.navigateByUrl('');
+    }
+    this.userService.currentUserChange.subscribe(value => {
+      this.me = value;
+    });
+
+    if (this.active === undefined) {
+      this.active = 'profile';
+    }
+  }
 }
