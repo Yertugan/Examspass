@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LandingComponent} from "./landing/landing.component";
-import {RegistrationComponent} from "./registration/registration.component";
-import {LoginComponent} from "./login/login.component";
-import {ProfileComponent} from "./profile/profile.component";
+import {LandingComponent} from './landing/landing.component';
+import {RegistrationComponent} from './registration/registration.component';
+import {LoginComponent} from './login/login.component';
+import {ProfileComponent} from './profile/profile.component';
 import { AuthGuard } from './shared/services/auth-services/auth.guard';
-import {CourseinfoComponent} from "./courseinfo/courseinfo.component";
+import {CourseinfoComponent} from './courseinfo/courseinfo.component';
 
 
 const routes: Routes = [
@@ -24,8 +24,8 @@ const routes: Routes = [
 
 
 
-  //{path: '', component: canActivate: [AuthGuard]},
-//{path: '', component:},
+  // {path: '', component: canActivate: [AuthGuard]},
+// {path: '', component:},
   /*
   {path: 'profile/:id',
     component: ProfileComponent,

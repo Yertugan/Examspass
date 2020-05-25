@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru-KZ';
@@ -21,8 +20,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { PurchasePageComponent } from './purchase-page/purchase-page.component';
-import {register} from "ts-node";
-import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
+import {register} from 'ts-node';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import {RouterModule} from '@angular/router';
+import {JwtInterceptor} from './shared/services/auth-services/jwtInterceptor';
 
 
 @NgModule({
@@ -36,17 +37,20 @@ import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
     ProfileComponent,
     LoginComponent,
     RegistrationComponent,
-    PurchasePageComponent
+    PurchasePageComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: JwtInterceptor,
-    multi: true
-  }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

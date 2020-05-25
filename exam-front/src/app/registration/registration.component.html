@@ -3,30 +3,37 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="account-box">
         <div class="row align-items-center">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" [formGroup]="form" (ngSubmit)="onSubmit()">
             <h4 class="reg-text">Регистрация</h4>
             <div class="form-group mg-top">
               <label for="firstName" class="col-sm-3 control-label">Имя</label>
               <div class="col-sm-9">
-                <input type="text" id="firstName" placeholder="Имя" class="form-control" autofocus>
+                <input type="text" id="firstName" placeholder="Имя" class="form-control" autofocus formControlName="name">
               </div>
             </div>
+
             <div class="form-group">
               <label for="lastName" class="col-sm-3 control-label">Фамилия</label>
               <div class="col-sm-9">
-                <input type="text" id="lastName" placeholder="Фамилия" class="form-control" autofocus>
+                <input type="text" id="lastName" placeholder="Фамилия" class="form-control" autofocus formControlName="surname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="user_name" class="col-sm-3 control-label">User name</label>
+              <div class="col-sm-9">
+                <input type="user_name" id="user_name" placeholder="User name" class="form-control" formControlName="username">
               </div>
             </div>
             <div class="form-group">
               <label for="email" class="col-sm-3 control-label">Email* </label>
               <div class="col-sm-9">
-                <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
+                <input type="email" id="email" placeholder="Email" class="form-control" name= "email" formControlName="email">
               </div>
             </div>
             <div class="form-group">
               <label for="password" class="col-sm-3 control-label">Пароль*</label>
               <div class="col-sm-9">
-                <input type="password" placeholder="Пароль" class="form-control">
+                <input type="password" placeholder="Пароль" class="form-control" formControlName="password">
               </div>
             </div>
             <div class="form-group">
@@ -35,15 +42,6 @@
                 <input type="password" id="password" placeholder="Подтвердить пароль" class="form-control">
               </div>
             </div>
-
-            <div class="form-group">
-              <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
-              <div class="col-sm-9">
-                <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control">
-                <span class="help-block">Your phone number won't be disclosed anywhere </span>
-              </div>
-            </div>
-
             <div class="form-group">
               <label class="control-label col-sm-3">Type of Your Account:</label>
               <div class="col-sm-6">
@@ -66,7 +64,11 @@
                 <span class="help-block">*Required fields</span>
               </div>
             </div>
-            <button type="submit" class="btn btn-lg btn-block btn-reg">Регистрация</button>
+            <button type="submit" class="btn btn-lg btn-block btn-reg" [disabled]="form.invalid || loading">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Регистрация
+            </button>
+
           </form> <!-- /form -->
         </div> <!-- ./container -->
       </div>

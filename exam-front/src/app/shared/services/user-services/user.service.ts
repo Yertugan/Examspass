@@ -14,6 +14,9 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  register(user: User) {
+    return this.http.post(`${this.DJANGO_SERVER}/users/register`, user);
+  }
 
   // User api ..................................................................................................
   getCurrentUser(): Promise<User> {
