@@ -13,6 +13,7 @@ export class ProfileComponent implements OnInit {
   me: any;
 
   @Input('active') active: string;
+  admin = false;
 
   constructor(private authenticationService: AuthenticationService,
               private userService: UserService,
@@ -25,6 +26,7 @@ export class ProfileComponent implements OnInit {
     }
     this.userService.currentUserChange.subscribe(value => {
       this.me = value;
+      this.admin = value.isAdmin;
     });
 
     if (this.active === undefined) {

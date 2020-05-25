@@ -13,12 +13,12 @@
     <div class="sidebar-menu">
       <ul class="list-unstyled">
         <li>
-          <a [ngClass]="{'active': active==='profile'}" routerLink="/profile">Мой профиль</a>
+          <a [ngClass]="{'active': active==='edit_profile'}" routerLink="/edit_profile">Мой профиль</a>
         </li>
         <li>
           <a [ngClass]="{'active': active==='course_list'}" routerLink="/course_list">Мои курсы</a>
         </li>
-        <li>
+        <li *ngIf="admin">
           <a [ngClass]="{'active': active==='course_create'}" routerLink="/course_create">Создать курс</a>
         </li>
       </ul>
