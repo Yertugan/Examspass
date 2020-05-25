@@ -18,7 +18,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
   login(userinfo: User) {
-    return this.http.post('${this.DJANGO_SERVER}/login/', userinfo).toPromise();
+    return this.http.post(` ${this.DJANGO_SERVER}/auth/login/`, userinfo).toPromise();
   }
 
   isAuthenticated(): boolean {

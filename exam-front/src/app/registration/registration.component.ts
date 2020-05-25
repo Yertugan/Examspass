@@ -261,4 +261,4 @@ export class RegistrationComponent implements OnInit {
         });
   }
 }
-
+*/

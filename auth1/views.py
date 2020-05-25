@@ -30,3 +30,14 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     def me(self, request):
         serializer = self.get_serializer(request.user)
         return Response(serializer.data)
+
+
+class GenerateRegisterAPIView(APIView):
+    http_method_names = ['post']
+
+    def post(self, request):
+        for i in range(2):
+            serializer = UserSerializer(username="username", password="password")
+            if serializer.is_valid():
+                serializer.save()
+        return Response("OK")
