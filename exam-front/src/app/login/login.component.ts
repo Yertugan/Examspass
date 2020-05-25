@@ -14,7 +14,13 @@ import {FormBuilder} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl: string;
+  error = '';
 
+<<<<<<< HEAD
   creds: User = {
     username: '',
     password: ''
@@ -49,8 +55,23 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+=======
+  constructor(
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {
+    // redirect to home if already logged in
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate(['/']);
+    }
+  }
+>>>>>>> master
 
+  get f() { return this.loginForm.controls; }
 
+<<<<<<< HEAD
  */
 
 
@@ -59,22 +80,46 @@ export class LoginComponent implements OnInit {
     username: '',
     password: ''
   };
+=======
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+>>>>>>> master
 
-  constructor(private router: Router,
-              private authService: AuthenticationService,
-              private userService: UserService) {}
+  onSubmit() {
+    this.submitted = true;
 
-  ngOnInit() {}
+    if (this.loginForm.invalid) {
+      return;
+    }
 
+<<<<<<< HEAD
   onSubmit() {
     this.authService.login(this.creds).then(result => {
       this.userService.setCurrentUser(result['user']);
       console.log('I logged in', result);
       localStorage.setItem('token', result['token']);
     });
+=======
+    this.loading = true;
+    this.authenticationService.login(this.f.username.value, this.f.password.value)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate([this.returnUrl]);
+        },
+        error => {
+          this.error = error;
+          this.loading = false;
+        });
+>>>>>>> master
   }
-
 }
+<<<<<<< HEAD
 */
 /*
 export class LoginComponent implements OnInit {
@@ -128,3 +173,5 @@ export class LoginComponent implements OnInit {
   }
   }
 */
+=======
+>>>>>>> master

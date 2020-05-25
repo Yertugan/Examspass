@@ -17,7 +17,7 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ('id', 'name', 'price', 'time_created', 'creator', 'organization', 'exam', 'rating', 'images_uploaded', 'creator_name')
+        fields = ('id', 'name', 'about', 'price', 'time_created', 'creator', 'organization', 'exam', 'rating', 'images_uploaded', 'creator_name')
 
     def get_creator_name(self, obj):
         if obj.creator is not None:

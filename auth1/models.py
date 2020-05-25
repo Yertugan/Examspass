@@ -24,6 +24,7 @@ class MainUser(AbstractUser):
 
 class Profile(models.Model):
     user = models.OneToOneField(MainUser, on_delete=models.CASCADE)
+    address = models.CharField(max_length=300)
     bio = models.TextField(max_length=500)
 
     def __str__(self):

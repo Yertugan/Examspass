@@ -2,7 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+=======
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+>>>>>>> master
 
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru-KZ';
@@ -25,6 +29,9 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import {RouterModule} from '@angular/router';
 import {JwtInterceptor} from './shared/services/auth-services/jwtInterceptor';
 
+import { SearchresultComponent } from './searchresult/searchresult.component';
+import {RouterModule} from "@angular/router";
+
 
 @NgModule({
   declarations: [
@@ -38,7 +45,11 @@ import {JwtInterceptor} from './shared/services/auth-services/jwtInterceptor';
     LoginComponent,
     RegistrationComponent,
     PurchasePageComponent,
+<<<<<<< HEAD
     EditProfileComponent
+=======
+    SearchresultComponent
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
