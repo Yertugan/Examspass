@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="792e86f1-e59a-4b5b-be16-c5a9931c4a44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/auth1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/auth1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-front/src/app/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-front/src/app/shared/services/auth-services/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/shared/services/auth-services/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-front/src/app/shared/services/auth-services/jwtInterceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/shared/services/auth-services/jwtInterceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/auth1/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -318,12 +314,12 @@
       <workItem from="1589828435554" duration="11650000" />
       <workItem from="1589903481117" duration="1214000" />
       <workItem from="1590175614334" duration="2093000" />
-      <workItem from="1590340311613" duration="6774000" />
+      <workItem from="1590340311613" duration="8066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64621000" />
+    <option name="totallyTimeSpent" value="65913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -619,7 +615,7 @@
     <entry file="file://$PROJECT_DIR$/auth1/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

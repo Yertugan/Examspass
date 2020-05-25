@@ -1,0 +1,35 @@
+.sidebar-content {
+  margin-top: 50px;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  background-color: rgba(75, 207, 250, .70);
+  width: 25%;
+}
+.sidebar-header{
+  margin-top: 40px;
+}
+
+
+.sidebar-menu{
+  font-size: 20px;
+  margin-top: 40px;
+}
+a{
+  color: white;
+}
+
+.sidebar-menu li{
+  padding: 10px 0;
+  text-align: center;
+}
+
+#sidebar{
+  height: 700px;
+}
+
+.coursename{
+  color: white;
+}
+
+
