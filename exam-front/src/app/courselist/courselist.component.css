@@ -1,0 +1,19 @@
+a.list-group-item {
+  height:auto;
+  min-height:220px;
+  padding-top: 20px;
+}
+a.list-group-item.active small {
+  color:#0FBCF9;
+}
+a:hover{
+  background-color: #0FBCF9;
+  color: white;
+}
+
+
+.container{
+  margin-top: 80px;
+  width: 30%;
+}
+

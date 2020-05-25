@@ -29,6 +29,8 @@ import {JwtInterceptor} from './shared/services/auth-services/jwtInterceptor';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { LessonComponent } from './lesson/lesson.component';
 import { CourselessonsComponent } from './courselessons/courselessons.component';
+import { CourselistComponent } from './courselist/courselist.component';
+import { CreatecourseComponent } from './createcourse/createcourse.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { CourselessonsComponent } from './courselessons/courselessons.component'
     LessonComponent,
     EditProfileComponent,
     CourselessonsComponent,
+    CourselistComponent,
+    CreatecourseComponent,
   ],
   imports: [
     BrowserModule,

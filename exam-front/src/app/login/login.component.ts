@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.creds);
     this.authService.login(this.creds).then(result => {
       this.userService.setCurrentUser(result['user']);
       console.log('I logged in', result);
