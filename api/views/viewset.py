@@ -1,22 +1,16 @@
 import operator
 
-from rest_framework import viewsets
-from rest_framework import mixins
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, IsAdminUser
-import logging
-from django.http import Http404
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404
-from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
-from api.models import *
-from api.serializers import *
-from rest_framework.views import APIView
-from django.utils import timezone
 from django.shortcuts import render
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
+from rest_framework.response import Response
+
+from api.serializers import *
 
 logger = logging.getLogger(__name__)
+
 
 def upload_file(request):
     if request.method == 'POST':
@@ -27,6 +21,7 @@ def upload_file(request):
     else:
         lesson_file = Lesson()
     return render(request, 'upload.html', {'lesson_file': lesson_file})
+
 
 class CourseImageViewSet(viewsets.ModelViewSet):
     queryset = CourseImage.objects.all()
@@ -59,12 +54,13 @@ class CourseViewSet(viewsets.ModelViewSet):
     @action(methods=['GET', 'POST'], detail=False)
     def my(self, request):
         logger.info('received my request')
-        if request.method == 'GET':
+        if request.method == 'GET':  # Get my courses
             fav_courses = request.user.my_courses.all()
-            courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
+            courses = Course.objects.filter(
+                id__in=fav_courses.values('course_id'))
             serializer = CourseSerializer(courses, many=True)
             return Response(serializer.data)
-        else:
+        else:  # Register for courses
             print(request.data)
             course_ids = request.data['course_ids']
             for i in course_ids:
@@ -75,7 +71,8 @@ class CourseViewSet(viewsets.ModelViewSet):
                 except:
                     raise Exception('no such course')
             fav_courses = request.user.my_courses.all()
-            courses = Course.objects.filter(id__in=fav_courses.values('course_id'))
+            courses = Course.objects.filter(
+                id__in=fav_courses.values('course_id'))
             serializer = CourseSerializer(courses, many=True)
             return Response(serializer.data)
 
@@ -95,7 +92,8 @@ class CourseViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def get_sorted_by_rating(self, request):
-        logger.info('received request: get list sorted by rating by user %s', request.user)
+        logger.info('received request: get list sorted by rating by user %s',
+                    request.user)
         courses = Course.objects.order_by('-rating')
         ordered = sorted(courses, key=operator.attrgetter('name'))
         serializer = CourseSerializer(ordered, many=True)
@@ -103,7 +101,8 @@ class CourseViewSet(viewsets.ModelViewSet):
 
     @action(methods=['GET'], detail=False)
     def get_courses_by_exam(self, request):
-        logger.info('received request: get courses by exam by user %s', request.user)
+        logger.info('received request: get courses by exam by user %s',
+                    request.user)
         exam = request.headers.get('exam')
         courses = Course.objects.filter(exam=exam)
         serializer = CourseSerializer(courses, many=True)
@@ -123,6 +122,3 @@ class CourseViewSet(viewsets.ModelViewSet):
         [course.delete() for course in courses if obsolete_course(course)]
 
         return Response("OK")
-
-
-

@@ -1,35 +1,43 @@
-
 <div class="container" style="padding-top: 60px;">
   <h1 class="page-header">Create course</h1>
   <div class="row">
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
-        <img src="assets/img/ielts.png" class="avatar img-rounded img-thumbnail" alt="avatar">
-        <input type="file" class="text-center center-block well well-sm">
+
+        <img
+          #img
+          [src]="selectedFile ? selectedFile.imgResult : 'assets/img/ielts.png'"
+          alt="avatar"
+          class="avatar img-rounded img-thumbnail" src="assets/img/ielts.png">
+
+        <input
+          #imageInput
+          type="file"
+          accept="image/*"
+          class="text-center center-block well well-sm"
+          (change)="processFile(imageInput)">
       </div>
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-
-
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" role="form" [formGroup]="formGroup" (ngSubmit)="formSubmit()">
         <div class="form-group">
           <label class="col-lg-3 control-label">Course name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" value="" type="text" formControlName="name">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Course Info:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" value="" type="text" formControlName="about">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Organization:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" value="" type="text" formControlName="organization">
           </div>
         </div>
 
@@ -37,31 +45,31 @@
         <div class="form-group">
           <label class="col-md-3 control-label">Exam:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="text">
+            <input class="form-control" value="" type="text" formControlName="exam">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Price:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="">
+            <input class="form-control" value="" type="number" formControlName="price">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Teacher:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="">
+            <input class="form-control" value="" type="text" formControlName="teacher">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Number of Lessons:</label>
           <div class="col-md-8">
-            <input class="form-control" value="" type="">
+            <input class="form-control" value="" type="number" formControlName="numberOfLessons">
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Сохранить" type="button">
+            <input class="btn btn-primary" value="Сохранить" type="submit">
             <span></span>
 
           </div>

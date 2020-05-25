@@ -4,13 +4,14 @@ import { User } from '../../models/user';
 import { Course} from '../../models/course';
 import { Comments } from '../../models/comments';
 import {Lesson} from '../../models/lesson';
+import {API_HOST} from "../service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private currentUser: User;
-  DJANGO_SERVER = 'http://127.0.0.1:8000';
+  DJANGO_SERVER = API_HOST;
 
   constructor(private http: HttpClient) { }
 

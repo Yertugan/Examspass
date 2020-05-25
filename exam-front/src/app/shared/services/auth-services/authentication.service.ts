@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {API_HOST} from "../service";
 
 
 
@@ -13,12 +14,12 @@ import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  DJANGO_SERVER = 'http://127.0.0.1:8000';
+  DJANGO_SERVER = API_HOST;
 
   constructor(private http: HttpClient) { }
 
   login(userinfo: User) {
-    return this.http.post(` ${this.DJANGO_SERVER}/auth/login/`, userinfo).toPromise();
+    return this.http.post(`${this.DJANGO_SERVER}/auth/login/`, userinfo).toPromise();
   }
 
   isAuthenticated(): boolean {

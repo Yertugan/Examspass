@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CourseService} from "../shared/services/course-services/course.service";
+import {Course} from "../shared/models/course";
 
 @Component({
   selector: 'app-courselist',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourselistComponent implements OnInit {
 
-  constructor() { }
+  loading = false;
+  courses: Course[];
+  error: string;
 
-  ngOnInit(): void {
+  constructor(private courseService: CourseService) {
   }
 
+  ngOnInit(): void {
+    this.loading = true;
+    this.courseService.coursesByRating()
+      .then(values => this.courses = values)
+      .catch(reason => this.error = reason)
+      .finally(() => this.loading = false);
+  }
 }
