@@ -19,6 +19,9 @@
       <li *ngIf="!this.me"><a routerLink="/registration" routerLinkActive="active" class="incolor">Регистрация</a></li>
 
       <li *ngIf="this.me">
+        <a (click)="logout()" class="incoproek incolor">Выйти</a>
+      </li>
+      <li *ngIf="this.me">
         <a (click)="logout()" class="incoproek incolor">{{this.me.username}}  <i class="glyphicon glyphicon-user"></i></a>
       </li>
     </ul>
