@@ -1,3 +1,11 @@
 .container{
   margin-top: 90px;
 }
+.lesson-info{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.video{
+  text-align: center;
+  margin-bottom: 100px;
+}
