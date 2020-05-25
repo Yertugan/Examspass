@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru-KZ';
@@ -25,6 +25,7 @@ import {register} from "ts-node";
 import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
 
 import { SearchresultComponent } from './searchresult/searchresult.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -43,7 +44,11 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
