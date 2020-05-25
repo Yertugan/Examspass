@@ -15,7 +15,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   register(user: User) {
-    return this.http.post(`${this.DJANGO_SERVER}/register/`, user);
+    return this.http.post(`${this.DJANGO_SERVER}/auth/register/`, user);
   }
 
   // User api ..................................................................................................
@@ -23,7 +23,7 @@ export class UserService {
     return this.http.get<User>(`${this.DJANGO_SERVER}/api/current`).toPromise();
   }
   createUser(input: FormData): Promise<User> {
-    return this.http.post<User>(`${this.DJANGO_SERVER}/admin/auth1/mainuser/add/`, input).toPromise();
+    return this.http.post<User>(`${this.DJANGO_SERVER}/auth/register/`, input).toPromise();
   }
 
   updateUser(input: FormData, id: string): Promise<User> {

@@ -41,3 +41,26 @@ h2{
   background-color: #0FBCF9;
   color: white;
 }
+
+a.list-group-item {
+  height:auto;
+  min-height:250px;
+  padding-top: 20px;
+
+}
+a.list-group-item.active small {
+  color:#0FBCF9;
+}
+a:hover{
+  background-color: #0FBCF9;
+  color: white;
+}
+
+.courselist{
+  margin-top: 50px;
+}
+
+
+
+
+
