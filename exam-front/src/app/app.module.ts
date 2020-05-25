@@ -22,10 +22,11 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { PurchasePageComponent } from './purchase-page/purchase-page.component';
 import {register} from "ts-node";
-import {JwtInterceptor} from "./shared/services/auth-services/jwt_interceptor";
+import {JwtInterceptor} from './shared/services/auth-services/jwt_interceptor';
 
 import { SearchresultComponent } from './searchresult/searchresult.component';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
+import { LessonComponent } from './lesson/lesson.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {RouterModule} from "@angular/router";
     LoginComponent,
     RegistrationComponent,
     PurchasePageComponent,
-    SearchresultComponent
+    SearchresultComponent,
+    LessonComponent
   ],
   imports: [
     BrowserModule,

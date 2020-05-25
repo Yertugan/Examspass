@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../../models/user';
-import { Course} from "../../models/course";
-import { Comments } from "../../models/comments";
-import {Lesson} from "../../models/lesson";
+import { Course} from '../../models/course';
+import { Comments } from '../../models/comments';
+import {Lesson} from '../../models/lesson';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   register(user: User) {
-    return this.http.post(`${this.DJANGO_SERVER}/users/register`, user);
+    return this.http.post(`${this.DJANGO_SERVER}/register/`, user);
   }
 
   // User api ..................................................................................................
@@ -23,11 +23,11 @@ export class UserService {
     return this.http.get<User>(`${this.DJANGO_SERVER}/api/current`).toPromise();
   }
   createUser(input: FormData): Promise<User> {
-    return this.http.post<User>(`${this.DJANGO_SERVER}/api/users/`, input).toPromise();
+    return this.http.post<User>(`${this.DJANGO_SERVER}/admin/auth1/mainuser/add/`, input).toPromise();
   }
 
   updateUser(input: FormData, id: string): Promise<User> {
-    return this.http.put<User>(`${this.DJANGO_SERVER}/api/users/${id}/`, input).toPromise();
+    return this.http.put<User>(`${this.DJANGO_SERVER}/admin/auth1/mainuser/${id}/change/`, input).toPromise();
   }
 
   deleteUser(id: string) {
