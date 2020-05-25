@@ -35,10 +35,13 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log(this.creds);
     this.authService.login(this.creds).then(result => {
-      this.userService.setCurrentUser(result['user']);
-      console.log('I logged in', result);
+      console.log(result);
       localStorage.setItem('token', result['token']);
-      this.router.navigateByUrl('');
+      this.userService.getCurrentUser().then(value => {
+        this.userService.setCurrentUser(value);
+        console.log('I logged in', value);
+        this.router.navigateByUrl('');
+      });
     });
   }
 }

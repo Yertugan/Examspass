@@ -8,7 +8,7 @@ import {API_HOST} from "../service";
 })
 export class ImageService {
 
-  DJANGO_HOST = API_HOST
+  DJANGO_SERVER = API_HOST
 
   constructor(private http: HttpClient) {}
 
@@ -18,6 +18,6 @@ export class ImageService {
     formData.append('image', image);
     formData.append('course_id', course_id.toString());
 
-    return this.http.post(`${this.DJANGO_HOST}/api/create_course_with_file/`, formData);
+    return this.http.post(`${this.DJANGO_SERVER}/api/create_course_with_file/`, formData);
   }
 }

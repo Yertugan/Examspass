@@ -5,15 +5,17 @@ import { Course} from '../../models/course';
 import { Comments } from '../../models/comments';
 import {Lesson} from '../../models/lesson';
 import {API_HOST} from "../service";
+import {BehaviorSubject, Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   private currentUser: User;
+  public currentUserChange: BehaviorSubject<User> = new BehaviorSubject(this.currentUser);
   DJANGO_SERVER = API_HOST;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   register(user: User) {
     return this.http.post(`${this.DJANGO_SERVER}/auth/register/`, user);
@@ -21,7 +23,7 @@ export class UserService {
 
   // User api ..................................................................................................
   getCurrentUser(): Promise<User> {
-    return this.http.get<User>(`${this.DJANGO_SERVER}/api/current`).toPromise();
+    return this.http.get<User>(`${this.DJANGO_SERVER}/auth/auth1/me`).toPromise();
   }
   createUser(input: FormData): Promise<User> {
     return this.http.post<User>(`${this.DJANGO_SERVER}/auth/register/`, input).toPromise();
@@ -37,11 +39,13 @@ export class UserService {
 
   setCurrentUser(user: User) {
     this.currentUser = user;
+    this.currentUserChange.next(this.currentUser);
   }
 
   destroyCurrentUser() {
     this.currentUser = undefined;
     localStorage.removeItem('token');
+    this.currentUserChange.next(this.currentUser);
   }
 
   getUserProfile(): Promise<User> {

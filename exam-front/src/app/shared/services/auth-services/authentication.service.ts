@@ -15,11 +15,20 @@ import {API_HOST} from "../service";
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
   DJANGO_SERVER = API_HOST;
+  public me: any;
 
   constructor(private http: HttpClient) { }
 
   login(userinfo: User) {
     return this.http.post(`${this.DJANGO_SERVER}/auth/login/`, userinfo).toPromise();
+  }
+
+  fetchMe() {
+    return this.http.get(`${this.DJANGO_SERVER}/auth/auth1/me`).toPromise()
+      .then(value => {
+        this.me = value;
+        return value;
+      });
   }
 
   isAuthenticated(): boolean {
@@ -34,6 +43,7 @@ export class AuthenticationService {
   }
 
   logout() {
-    this.http.post('${this.DJANGO_SERVER}/api/logout/', {});
+    localStorage.removeItem('token');
+    this.me = null;
   }
 }
