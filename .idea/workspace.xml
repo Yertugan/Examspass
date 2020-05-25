@@ -4,6 +4,8 @@
     <list default="true" id="792e86f1-e59a-4b5b-be16-c5a9931c4a44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-front/src/app/lesson/lesson.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/lesson/lesson.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-front/src/app/lesson/lesson.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/lesson/lesson.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-front/src/app/shared/services/user-services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/exam-front/src/app/shared/services/user-services/user.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
