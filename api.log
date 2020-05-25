@@ -214,3 +214,26 @@ INFO -- 2019-12-23 16:06:52,046 -- number of days to wait : -2800 2012-04-23 18:
 INFO -- 2019-12-23 16:06:52,046 -- number of days to wait : 122 2020-04-23 18:25:43.511000+00:00
 INFO -- 2019-12-23 16:06:52,046 -- number of days to wait : 1 2019-12-24 18:25:43.511000+00:00
 INFO -- 2019-12-23 18:37:16,308 -- received request: refresh list of courses
+INFO -- 2020-05-25 19:15:57,859 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:16:09,772 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:16:12,450 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:16:15,031 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:49:08,643 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:50:05,848 -- received request: get courses by exam by user 7: akali
+INFO -- 2020-05-25 19:51:24,277 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:54:13,823 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:54:37,966 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:54:46,922 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:55:05,783 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:56:35,846 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:56:48,624 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:57:10,072 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:58:36,945 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 19:59:20,109 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:08:40,418 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:08:47,397 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:10:49,942 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:11:10,335 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:11:18,405 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 20:11:56,934 -- received request: get list sorted by rating by user 7: akali
+INFO -- 2020-05-25 21:34:43,082 -- received request: get list sorted by rating by user 7: akali
