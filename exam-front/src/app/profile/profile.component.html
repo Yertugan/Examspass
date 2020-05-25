@@ -2,26 +2,26 @@
   <div class="sidebar-content">
     <div class="sidebar-header text-center">
       <div class="user-pic">
-        <img class="img-responsive img-rounded img-profile" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+        <img class="img-responsive img-rounded img-profile"
+             src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
              alt="User picture">
       </div>
       <div class="user-info">
-          <span class="user-name">John Smith</span>
-
+        <span class="user-name">{{me.username}}</span>
       </div>
     </div>
     <div class="sidebar-menu">
-        <ul class="list-unstyled">
-          <li class="active">
-            <a href="#">Мой профиль</a>
-          </li>
-          <li>
-            <a href="#">Мои курсы</a>
-          </li>
-          <li>
-            <a href="#">Создать курс</a>
-          </li>
-        </ul>
+      <ul class="list-unstyled">
+        <li>
+          <a [ngClass]="{'active': active==='profile'}" routerLink="/profile">Мой профиль</a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': active==='course_list'}" routerLink="/course_list">Мои курсы</a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': active==='course_create'}" routerLink="/course_create">Создать курс</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
