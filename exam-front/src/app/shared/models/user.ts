@@ -7,7 +7,6 @@ export interface User {
   password?: string;
   profile_pic?: string;
   joined_at?: string;
-  token?: string;
   email?: string;
   purchased_courses?: Course[];
 }
