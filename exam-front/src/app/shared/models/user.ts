@@ -1,5 +1,6 @@
 import { Course } from './course';
 export interface User {
+  isAdmin?: boolean;
   id?: number;
   name?: string;
   surname?: string;
