@@ -8,7 +8,7 @@
       <div class="input-group input-search">
         <input type="text" class="form-control inin" placeholder="Search" name="search">
         <div class="input-group-btn">
-          <button class="btn btn-default inin" type="submit">
+          <button class="btn btn-default inin" type="submit" routerLink="" >
             <i class="glyphicon glyphicon-search incolor"></i>
           </button>
         </div>
@@ -22,7 +22,7 @@
         <a (click)="logout()" class="incoproek incolor">Выйти</a>
       </li>
       <li *ngIf="this.me">
-        <a (click)="logout()" class="incoproek incolor">{{this.me.username}}  <i class="glyphicon glyphicon-user"></i></a>
+        <a routerLink="/profile" routerLinkActive="active" class="incoproek incolor">{{this.me.username}}  <i class="glyphicon glyphicon-user"></i></a>
       </li>
     </ul>
   </div>
