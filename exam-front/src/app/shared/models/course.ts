@@ -1,5 +1,5 @@
 import { User } from './user';
-import {Lesson} from "./lesson";
+import {Lesson} from './lesson';
 
 export interface Course {
   id?: number;

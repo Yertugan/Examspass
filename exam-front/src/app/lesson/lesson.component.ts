@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {ActivatedRoute, ActivationEnd, Router} from "@angular/router";
+import {ActivatedRoute, ActivationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-lesson',
