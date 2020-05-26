@@ -10,6 +10,10 @@
 .sidebar-header{
   margin-top: 40px;
 }
+.user-info{
+  font-size: 30px;
+  color: white;
+}
 .user-pic {
   width: 150px;
   height: 150px;
@@ -17,11 +21,7 @@
   overflow: hidden;
   margin: 0 auto;
 }
-.user-pic img {
-  height: 100%;
-  width: 100%;
-  display: block;
-}
+
 .sidebar-menu{
   font-size: 20px;
   margin-top: 40px;
@@ -36,7 +36,7 @@ a{
 }
 
 #sidebar{
-  height: 90%;
+  height: 100%;
 }
 
 .active {

@@ -7,6 +7,7 @@ footer{
   border-width: 1px;
   background-color: white;
   border-bottom-color: white;
+  position: fixed;
 }
 
 .footer-col{
