@@ -9,6 +9,8 @@ import {CourseinfoComponent} from './courseinfo/courseinfo.component';
 import {CourselistComponent} from "./courselist/courselist.component";
 import {CreatecourseComponent} from "./createcourse/createcourse.component";
 import {EditProfileComponent} from "./edit-profile/edit-profile.component";
+import {CourselessonsComponent} from "./courselessons/courselessons.component";
+import {LessonComponent} from "./lesson/lesson.component";
 
 
 const routes: Routes = [
@@ -24,10 +26,9 @@ const routes: Routes = [
   {path: 'course_info/:id', component: CourseinfoComponent},
   {path: 'course_list', component: CourselistComponent},
   {path: 'course_create', component: CreatecourseComponent},
-  {path: 'edit_profile', component: EditProfileComponent}
-
-
-
+  {path: 'edit_profile', component: EditProfileComponent},
+  {path: 'course_lessons/:course_id', component: CourselessonsComponent},
+  {path: 'course_lessons/:course_id/:lesson_id', component: LessonComponent}
 
   // {path: '', component: canActivate: [AuthGuard]},
 // {path: '', component:},
