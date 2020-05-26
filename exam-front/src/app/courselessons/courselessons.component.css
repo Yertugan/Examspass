@@ -4,7 +4,7 @@
   overflow-y: auto;
   position: relative;
   background-color: rgba(75, 207, 250, .70);
-  width: 25%;
+  /*width: 25%;*/
 }
 .sidebar-header{
   margin-top: 40px;
@@ -25,11 +25,13 @@ a{
 }
 
 #sidebar{
-  height: 700px;
+  /*height: 90%;*/
 }
 
 .coursename{
   color: white;
 }
 
-
+.active {
+  color: black;
+}

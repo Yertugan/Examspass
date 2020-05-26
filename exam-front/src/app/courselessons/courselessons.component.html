@@ -1,32 +1,36 @@
 <nav id="sidebar">
   <div class="sidebar-content">
     <div class="sidebar-header text-center">
-      <h3 class="coursename">IELTS for Beginners</h3>
+      <h3 class="coursename">{{course_name}}</h3>
 
     </div>
     <div class="sidebar-menu">
       <ul class="list-unstyled">
-        <li>
-          <a href="#">Обзор</a>
+        <li *ngFor="let lesson of lessons">
+          <a [ngClass]="{'active': lesson.id === lesson_id}"
+             routerLink="/course_lessons/{{course_id}}/{{lesson.id}}">{{lesson.title}} </a>
         </li>
-        <li class="active">
-          <a href="#">Урок 1</a>
-        </li>
-        <li>
-          <a href="#">Урок 2</a>
-        </li>
-        <li>
-          <a href="#">Урок 3</a>
-        </li>
-        <li class="active">
-          <a href="#">Урок 4</a>
-        </li>
-        <li class="active">
-          <a href="#">Урок 5</a>
-        </li>
-        <li class="active">
-          <a href="#">Тест</a>
-        </li>
+        <!--        <li>-->
+        <!--          <a href="#">Обзор</a>-->
+        <!--        </li>-->
+        <!--        <li class="active">-->
+        <!--          <a href="#">Урок 1</a>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a href="#">Урок 2</a>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a href="#">Урок 3</a>-->
+        <!--        </li>-->
+        <!--        <li class="active">-->
+        <!--          <a href="#">Урок 4</a>-->
+        <!--        </li>-->
+        <!--        <li class="active">-->
+        <!--          <a href="#">Урок 5</a>-->
+        <!--        </li>-->
+        <!--        <li class="active">-->
+        <!--          <a href="#">Тест</a>-->
+        <!--        </li>-->
       </ul>
     </div>
   </div>

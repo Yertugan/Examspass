@@ -8,7 +8,7 @@
       <div *ngIf="!loading">
 
         <div *ngIf="courses" class="list-group">
-          <a *ngFor="let course of courses" class="list-group-item">
+          <a routerLink="/course_lessons/{{course.id}}/1" *ngFor="let course of courses" class="list-group-item">
             <div class="media col-md-6">
               <figure class="pull-left">
                 <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250"
