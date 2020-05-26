@@ -31,6 +31,7 @@ import { LessonComponent } from './lesson/lesson.component';
 import { CourselessonsComponent } from './courselessons/courselessons.component';
 import { CourselistComponent } from './courselist/courselist.component';
 import { CreatecourseComponent } from './createcourse/createcourse.component';
+import { StudentProfileComponent } from './studentprofile/studentprofile.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { CreatecourseComponent } from './createcourse/createcourse.component';
     CourselessonsComponent,
     CourselistComponent,
     CreatecourseComponent,
+    StudentProfileComponent,
   ],
   imports: [
     BrowserModule,

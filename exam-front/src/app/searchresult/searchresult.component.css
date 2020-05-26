@@ -18,3 +18,8 @@ a:hover{
   margin-top: 80px;
 }
 
+.pull-left{
+  width: 200px;
+  height: 200px;
+}
+

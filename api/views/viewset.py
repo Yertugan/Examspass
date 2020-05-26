@@ -108,6 +108,14 @@ class CourseViewSet(viewsets.ModelViewSet):
         serializer = CourseSerializer(courses, many=True)
         return Response(serializer.data)
 
+    def get_courses_by_name(self, request):
+        logger.info('received request: get courses by exam by user %s',
+                    request.user)
+        name = request.headers.get('name')
+        courses = Course.objects.filter(name=name)
+        serializer = CourseSerializer(courses, many=True)
+        return Response(serializer.data)
+
     @action(methods=['GET'], detail=False)
     def refresh(self, request):
         logger.info('received request: refresh list of courses')

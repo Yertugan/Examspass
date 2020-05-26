@@ -1,12 +1,26 @@
-<div style="display: flex">
-  <app-profile [active]="'course_list'"></app-profile>
+<div class="all-course-list" style="display: flex">
+  <app-profile class="app-profile" [active]="'course_list'"></app-profile>
   <div class="container">
     <div class="row">
       <div *ngIf="loading">
         Loading...
       </div>
       <div *ngIf="!loading">
-
+        <div *ngIf="ok" class="list-group">
+          <a routerLink="/course_lessons/2/1" class="list-group-item">
+            <div class="media col-md-6">
+              <figure class="pull-left">
+                <img class="media-object img-rounded img-responsive" src="/assets/img/ielts.png"
+                     alt="placehold.it/350x250">
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <h4 class="list-group-item-heading"> IELTS for Beginners </h4>
+              <p class="list-group-item-text"> IELTS Reading - так называется одна из секций международного экзамена
+                IELTS.</p>
+            </div>
+          </a>
+        </div>
         <div *ngIf="courses" class="list-group">
           <a routerLink="/course_lessons/{{course.id}}/1" *ngFor="let course of courses" class="list-group-item">
             <div class="media col-md-6">

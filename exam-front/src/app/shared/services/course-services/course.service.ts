@@ -16,7 +16,7 @@ export class CourseService {
     return this.http.get(`${this.DJANGO_SERVER}/api/courses/get_sorted_by_rating`).toPromise()
       .then(response => {
         return response as Course[];
-      })
+      });
   }
 
   createCourse(course: Course): Promise<Course> {

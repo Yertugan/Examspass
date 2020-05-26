@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../shared/services/auth-services/authentication.service";
-import {UserService} from "../shared/services/user-services/user.service";
+import {UserService} from '../shared/services/user-services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   me: any;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.userService.currentUserChange.subscribe(value => {
@@ -24,5 +25,6 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.userService.destroyCurrentUser();
+    this.router.navigateByUrl('');
   }
 }
