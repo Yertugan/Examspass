@@ -332,3 +332,10 @@ INFO -- 2020-05-26 10:37:22,808 -- received request: get list sorted by rating b
 INFO -- 2020-05-26 10:53:41,398 -- received request: get list sorted by rating by user 2: admin
 INFO -- 2020-05-26 10:54:13,391 -- received request: get list sorted by rating by user 2: admin
 INFO -- 2020-05-26 10:56:57,452 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:32:37,970 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:33:09,595 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:36:09,594 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:37:03,410 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:37:34,914 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:38:49,954 -- received request: get list sorted by rating by user 2: admin
+INFO -- 2020-05-26 12:39:20,404 -- received request: get list sorted by rating by user 2: admin

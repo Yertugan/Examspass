@@ -24,4 +24,11 @@ export class CourseService {
       .then(response => response as Course);
   }
 
+  courseSearch(): Promise<Course[]> {
+    return this.http.get(`${this.DJANGO_SERVER}/api/courses/get_courses_by_name`).toPromise()
+      .then(response => {
+        return response as Course[];
+      });
+  }
+
 }
